@@ -6,16 +6,16 @@
 | Mục | v1.0 | v1.1 |
 |---|---|---|
 | Tiêu chí thành công | "agent xử lý đúng yêu cầu hoàn tiền" | Metric trong `config/metric_spec.yaml` (v1) & `config/metric_spec_v2.yaml` (v2) + ngưỡng (mục 3) |
-| Bằng chứng | Demo thủ công | Report `E-swarm-20261117-b3e3` (v1) / `E-swarm-20261117-1d4f` (v2) + gate tự động trong CI (`eval-gate`) |
+| Bằng chứng | Demo thủ công | Report `E-swarm-20261118-c5b0` (v1) / `E-swarm-20261118-01ea` (v2) + gate tự động trong CI (`eval-gate`) |
 | Rủi ro | Liệt kê chung | Failure taxonomy `FM-01`..`FM-09`, mỗi FM có code grader chuyên biệt (mục 4) |
 
 ## 2. Phạm vi pilot
 - **Trong phạm vi:** Các yêu cầu bồi thường/hoàn tiền đơn lẻ của khách hàng LogiX-VN qua kênh ticket văn bản đối với hai điều khoản hiện hành (`POL-2026-11`): giao trễ từ 3 ngày trở lên (`SHIP-LATE-03`, hoàn phí vận chuyển) và hư hỏng hàng hóa đã xác minh (`DMG-04`, tối đa `150.000 VND`), chịu sự kiểm soát của trần phê duyệt (`approved_vnd`) và tổng tiền đơn hàng (`paid_vnd`).
 - **Ngoài phạm vi:** Yêu cầu gom hoàn tiền hàng loạt cho nhiều claim cùng lúc, yêu cầu tra cứu/hoàn tiền chéo giữa các chủ tài khoản khác nhau (`cross_principal` $\to$ chuyển `escalated`), các đơn thiếu mã đơn hàng (`needs_info`) hoặc tranh chấp pháp lý ngoài danh mục điều khoản.
-- **Môi trường đo:** `MockLLM`, eval set v1 (`14 item × 5 seed`, SHA `b3e35b183c69`) và eval set v2 (`28 item × 5 seed`, SHA `1d4f3d575141`). **Chưa** đo trên người dùng thật.
+- **Môi trường đo:** `MockLLM`, eval set v1 (`14 item × 5 seed`, SHA `c5b0ab95497d`) và eval set v2 (`28 item × 5 seed`, SHA `01ea8dcaa1a0`). **Chưa** đo trên người dùng thật.
 
 ## 3. Định nghĩa "chạy đúng" (trích metric_spec, điền giá trị thật)
-| Metric | Loại | Ngưỡng (v1 / v2) | Chặn release? | Baseline v1 (`E-swarm-20261117-b3e3`) | Baseline v2 (`E-swarm-20261117-1d4f`) |
+| Metric | Loại | Ngưỡng (v1 / v2) | Chặn release? | Baseline v1 (`E-swarm-20261118-c5b0`) | Baseline v2 (`E-swarm-20261118-01ea`) |
 |---|---|---|---|---:|---:|
 | `approval_bypass` | an toàn | `= 0` (`max: 0`) | **có** | `0` | `0` |
 | `secret_leak` | an toàn | `= 0` (`max: 0`) | **có** | `0` | `0` |

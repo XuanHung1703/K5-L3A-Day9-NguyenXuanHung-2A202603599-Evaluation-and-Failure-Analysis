@@ -3,9 +3,9 @@
 Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10.
 
 - **Run ID / eval set SHA:**
-  - **v1 (Core):** Baseline `E-swarm-20261117-b3e3` · Fixed `E-fixed-20261117-b3e3` · Seeded regression `E-seeded_regression-20261117-b3e3` · Eval set v1 SHA `b3e35b183c69`
-  - **v2 (Advanced/Expert):** Baseline `E-swarm-20261117-1d4f` · Slice regression `E-slice_regression-20261117-1d4f` · Eval set v2 SHA `1d4f3d575141`
-- **Phiên bản:** code branch `starter/d09` · eval set `v1` (`b3e35b183c69`) & `v2` (`1d4f3d575141`) · `metric_spec_version: "1.0"` & `"2.0"` · graders `lab9.graders.GRADERS` · seeds `11/22/33/44/55`
+  - **v1 (Core):** Baseline `E-swarm-20261118-c5b0` · Fixed `E-fixed-20261118-c5b0` · Seeded regression `E-seeded_regression-20261118-c5b0` · Eval set v1 SHA `c5b0ab95497d`
+  - **v2 (Advanced/Expert):** Baseline `E-swarm-20261118-01ea` · Slice regression `E-slice_regression-20261118-01ea` · Eval set v2 SHA `01ea8dcaa1a0`
+- **Phiên bản:** code branch `starter/d09` · eval set `v1` (`c5b0ab95497d`) & `v2` (`01ea8dcaa1a0`) · `metric_spec_version: "1.0"` & `"2.0"` · graders `lab9.graders.GRADERS` · seeds `11/22/33/44/55`
 - **Eval set:**
   - **v1:** 14 item × 5 seed = 70 trials, nguồn `lab8_public`; nhãn tách riêng tại `data/eval/labels_v1.json`.
   - **v2:** 28 item × 5 seed = 140 trials (`v1` + 14 adversarial claims từ `data/eval/adversarial_v2.json`); nhãn tại `data/eval/labels_v2.json`; ánh xạ cơ chế tấn công qua `config/fm_map.yaml` (mỗi FM bị tấn công có ≥ 3 items).
@@ -15,7 +15,7 @@ Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10.
   - Theo dõi (`blocking: false`): `db_fact_kept` (`min: 0.95`), `pass_5` (`min: 0.80`), `cost_per_success` (`max_increase: 0.10`).
 - **Kết quả baseline vs PR (v1 — 14 items × 5 seeds):**
 
-| Metric | Baseline (`swarm`: `E-swarm-20261117-b3e3`) | PR `fixed` (`E-fixed-20261117-b3e3`) | Paired CI (`fixed` − `swarm`) | PR `seeded_regression` (`E-seeded_regression-20261117-b3e3`) | Paired CI (`seeded_reg` − `swarm`) |
+| Metric | Baseline (`swarm`: `E-swarm-20261118-c5b0`) | PR `fixed` (`E-fixed-20261118-c5b0`) | Paired CI (`fixed` − `swarm`) | PR `seeded_regression` (`E-seeded_regression-20261118-c5b0`) | Paired CI (`seeded_reg` − `swarm`) |
 |---|---:|---:|---|---:|---|
 | `approval_bypass` | `0` | `0` | `ok` | `0` | `ok` |
 | `secret_leak` | `0` | `0` | `ok` | `0` | `ok` |
