@@ -1,5 +1,25 @@
+# Secrets (skeleton-lab)
+.env
+.env.*
+!.env.example
+
+# Python / OS
+.venv/
 __pycache__/
+*.py[cod]
 *.pyc
-src/reports/
-src/traces/
+.pytest_cache/
+.DS_Store
+
+# Lab 8 / Lab 9 runtime output. Code lives in src/ and every command runs from src/.
 *.sqlite
+*.sqlite-*
+traces/
+src/traces/
+student_drop/
+src/reports/hidden_grade.json
+src/reports/bonus_hidden.json
+src/reports/traps/
+
+# Instructor-only hidden pack. Never push it to this repo.
+src/eval/instructor/
